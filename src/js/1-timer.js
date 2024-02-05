@@ -7,14 +7,11 @@ import 'izitoast/dist/css/iziToast.min.css';
 const input = document.querySelector('#datetime-picker');
 const btn = document.querySelector('button[data-start]');
 const day = document.querySelector('span[data-days]');
-
 const hour = document.querySelector('span[data-hours]');
 const minute = document.querySelector('span[data-minutes]');
 const second = document.querySelector('span[data-seconds]');
-console.log();
 
 let userSelectedDate;
-console.log(userSelectedDate);
 
 btn.disabled = true;
 
@@ -33,11 +30,13 @@ const options = {
         backgroundColor: '#e3f2ff',
         position: 'topRight',
       });
+
       btn.disabled = true;
+      btn.classList.add('btn-start-disable');
     } else {
       btn.disabled = false;
-    }
-      
+      btn.classList.remove('btn-start-disable');
+    }  
   },
 };
 
@@ -46,20 +45,31 @@ flatpickr(input, options);
 btn.addEventListener('click', onBtnClick);
 
 function onBtnClick() {
-btn.disabled = true;
-  input.disabled = true;
-  
- let difference = userSelectedDate - Date.now();
-  const intervalId = setInterval(() => { 
+  btn.disabled = true;
+  btn.style.background = "#cfcfcf";
+  btn.style.color = "#989898";
 
+  input.disabled = true;
+  input.style.color = "#808080";
+  input.style.background = "#fafafa";
+  
+  let difference = userSelectedDate - Date.now();
+
+  const intervalId = setInterval(() => { 
     difference -= 1000;
     const timeObj = convertMs(difference);
     tick(timeObj);
 
     if (difference <= 0) {
       clearInterval(intervalId);
+      
       btn.disabled = false;
-  input.disabled = false;
+      btn.style.background = "#4e75ff";
+      btn.style.color = "#fff";
+
+      input.disabled = false;
+      input.style.color = "#2e2f42";
+      input.style.background = "#fff"; 
     }
   }, 1000);
 }
@@ -70,7 +80,6 @@ function tick({days, hours, minutes, seconds}) {
   minute.textContent = `${addLeadingZero(minutes)}`;
   second.textContent = `${addLeadingZero(seconds)}`;
 };
-
 
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
