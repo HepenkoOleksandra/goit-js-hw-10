@@ -15,6 +15,8 @@ a {
     font-style: normal;
 }
 
+/* 1-timer */
+
 .form-search {
     display: flex;
     align-items: center;
@@ -127,6 +129,6 @@ a {
     text-transform: uppercase;
 }
 
-
+/* 2-snackbar */
 
 
