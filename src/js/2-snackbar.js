@@ -1,7 +1,7 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-const form = document.querySelector(".form");
+const form = document.querySelector(".form-promise");
 
 form.addEventListener('submit', onFormSubmit);
 
@@ -10,7 +10,7 @@ function onFormSubmit(e) {
 
   const delay = e.target.elements.delay.value.trim();
   const state = e.target.elements.state.value;
-
+ 
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {

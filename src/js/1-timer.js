@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const input = document.querySelector('#datetime-picker');
-const btn = document.querySelector('button[data-start]');
+const btnStart = document.querySelector('button[data-start]');
 const day = document.querySelector('span[data-days]');
 const hour = document.querySelector('span[data-hours]');
 const minute = document.querySelector('span[data-minutes]');
@@ -13,7 +13,7 @@ const second = document.querySelector('span[data-seconds]');
 
 let userSelectedDate;
 
-btn.disabled = true;
+btnStart.disabled = true;
 
 const options = {
   enableTime: true, // time
@@ -26,52 +26,48 @@ const options = {
     if (userSelectedDate < new Date) {
       iziToast.show({
         message: 'Please, choose a date in the future!',
-        messageColor: 'green',
-        backgroundColor: '#e3f2ff',
+        messageColor: 'white',
+        backgroundColor: 'red',
         position: 'topRight',
       });
 
-      btn.disabled = true;
-      btn.classList.add('btn-start-disable');
+      btnStart.disabled = true;
+      
     } else {
-      btn.disabled = false;
-      btn.classList.remove('btn-start-disable');
+      btnStart.disabled = false;
+      btnStart.classList.add('btn-disabled-false');
     }  
   },
 };
 
 flatpickr(input, options);
 
-btn.addEventListener('click', onBtnClick);
+btnStart.addEventListener('click', onBtnClick);
 
 function onBtnClick() {
-  btn.disabled = true;
-  btn.style.background = "#cfcfcf";
-  btn.style.color = "#989898";
+  btnStart.disabled = true;
+  btnStart.classList.remove('btn-disabled-false');
 
   input.disabled = true;
   input.style.color = "#808080";
   input.style.background = "#fafafa";
   
-  let difference = userSelectedDate - Date.now();
+  let differenceTime = userSelectedDate - Date.now();
 
   const intervalId = setInterval(() => { 
-    difference -= 1000;
-    const timeObj = convertMs(difference);
+    differenceTime -= 1000;
+    const timeObj = convertMs(differenceTime);
     tick(timeObj);
 
-    if (difference <= 0) {
+    if (differenceTime <= 1000) {
       clearInterval(intervalId);
       
-      btn.disabled = false;
-      btn.style.background = "#4e75ff";
-      btn.style.color = "#fff";
-
       input.disabled = false;
       input.style.color = "#2e2f42";
       input.style.background = "#fff"; 
     }
   }, 1000);
+  
 }
 
 function tick({days, hours, minutes, seconds}) {

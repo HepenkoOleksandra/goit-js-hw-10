@@ -47,7 +47,7 @@ a {
     border: 1px solid #000;
 }
 
-.input-search:active {
+.input-search:focus {
     border: 1px solid #4e75ff;
 }
 
@@ -59,29 +59,7 @@ a {
     padding: 8px 16px;
     width: 75px;
     height: 40px;
-    background: #4e75ff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #fff;
-    border: none;
-}
-
-.btn-start:hover {
-    background: #6c8cff;
-}
-
-.btn-start-disable {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    padding: 8px 16px;
-    width: 75px;
-    height: 40px;
-    background: #cfcfcf;
+    background-color: #cfcfcf;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -89,6 +67,11 @@ a {
     letter-spacing: 0.04em;
     color: #989898;
     border: none;
+}
+
+.btn-disabled-false {
+    background-color: #4e75ff;
+    color: #fff;  
 }
 
 .timer {
@@ -131,24 +114,23 @@ a {
 
 /* 2-snackbar */
 
-.form {
+.form-promise {
     margin: 10px;
     width: 360px;
     height: auto;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-delay {
-
     height: 72px;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-        gap: 8px;
-font-family: "Montserrat", sans-serif;
+    gap: 8px;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -157,27 +139,26 @@ font-family: "Montserrat", sans-serif;
 }
 
 .input-delay {
-border: 1px solid #808080;
+    border: 1px solid #808080;
     border-radius: 4px;
     width: 360px;
     height: 40px;
     font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        color: #2e2f42;
-
-        outline: transparent;
-        padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    outline: transparent;
+    padding-left: 16px;
 }
 
 .input-delay:hover {
-border: 1px solid #000;
+    border: 1px solid #000;
 }
 
 .input-delay:focus {
-border: 1px solid #4e75ff;
+    border: 1px solid #4e75ff;
 }
 
 fieldset {
@@ -186,56 +167,45 @@ fieldset {
     align-items: flex-start;
     justify-content: center;
     width: 360px;
-        height: 64px;
-border: 1px solid #808080;
+    height: 64px;
+    border: 1px solid #808080;
     border-radius: 4px;
-        margin-top: 16px;
-
-        font-family: "Montserrat", sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.04em;
-            color: #2e2f42;
-         }
+    margin-top: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
 
 fieldset:hover {
-border: 1px solid #000;
+    border: 1px solid #000;
 }
 
 .input-color {
-    border: 1px solid #4e75ff;
-        border-radius: 14px;
-        width: 20px;
-        height: 20px;
-        
+    width: 20px;
+    height: 20px;
+    margin: 0;    
 }
 
-/* .input-color:focus {
-background: #4e75ff;
-} */
-
-/* label-status */
-
-
-
-button {
+.btn-create-notification {
     margin-top: 24px;
     border-radius: 8px;
     border: none;
-        padding: 8px 16px;
-        width: auto;
-        height: 40px;
-        background: #4e75ff;
-        font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.04em;
-            color: #fff;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+    background: #4e75ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
 }
 
-button:hover {
+.btn-create-notification:hover {
     background: #6c8cff;
-}
+} 
 
