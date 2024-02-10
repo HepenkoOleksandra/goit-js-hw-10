@@ -131,4 +131,111 @@ a {
 
 /* 2-snackbar */
 
+.form {
+    margin: 10px;
+    width: 360px;
+    height: auto;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.form-delay {
+
+    height: 72px;
+display: flex;
+flex-direction: column;
+    justify-content: center;
+        gap: 8px;
+font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.input-delay {
+border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+
+        outline: transparent;
+        padding-left: 16px;
+}
+
+.input-delay:hover {
+border: 1px solid #000;
+}
+
+.input-delay:focus {
+border: 1px solid #4e75ff;
+}
+
+fieldset {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 360px;
+        height: 64px;
+border: 1px solid #808080;
+    border-radius: 4px;
+        margin-top: 16px;
+
+        font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #2e2f42;
+         }
+
+fieldset:hover {
+border: 1px solid #000;
+}
+
+.input-color {
+    border: 1px solid #4e75ff;
+        border-radius: 14px;
+        width: 20px;
+        height: 20px;
+        
+}
+
+/* .input-color:focus {
+background: #4e75ff;
+} */
+
+/* label-status */
+
+
+
+button {
+    margin-top: 24px;
+    border-radius: 8px;
+    border: none;
+        padding: 8px 16px;
+        width: auto;
+        height: 40px;
+        background: #4e75ff;
+        font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #fff;
+}
+
+button:hover {
+    background: #6c8cff;
+}
 

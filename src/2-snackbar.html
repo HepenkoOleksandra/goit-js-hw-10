@@ -9,19 +9,32 @@
   <body>
     <p><a href="index.html">Go back</a></p>
     <form class="form">
-      <label>
+      <label class="form-delay">
         Delay (ms)
-        <input type="number" name="delay" required />
+
+        <input type="number" name="delay" required class="input-delay" />
       </label>
 
       <fieldset>
         <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
+        <label class="label-status">
+          <input
+            type="radio"
+            name="state"
+            value="fulfilled"
+            required
+            class="input-color"
+          />
           Fulfilled
         </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
+        <label class="label-status">
+          <input
+            type="radio"
+            name="state"
+            value="rejected"
+            required
+            class="input-color"
+          />
           Rejected
         </label>
       </fieldset>
