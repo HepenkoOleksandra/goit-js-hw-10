@@ -7,29 +7,45 @@
     
     <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-cf718561.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-15704d43.css">
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
-    <form class="form">
-      <label>
+    <form class="form-promise">
+      <label class="form-delay">
         Delay (ms)
-        <input type="number" name="delay" required />
+        <input type="number" name="delay" required class="input-delay" />
       </label>
 
       <fieldset>
         <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
+        <label class="label-status">
+          <input
+            type="radio"
+            name="state"
+            value="fulfilled"
+            required
+            class="input-color"
+          />
           Fulfilled
         </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
+        <label class="label-status">
+          <input
+            type="radio"
+            name="state"
+            value="rejected"
+            required
+            class="input-color"
+          />
           Rejected
         </label>
       </fieldset>
 
-      <button type="submit">Create notification</button>
+      <button type="submit" class="btn-create-notification">
+        Create notification
+      </button>
     </form>
     
   </body>
